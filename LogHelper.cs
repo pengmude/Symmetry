@@ -152,9 +152,10 @@ namespace Logger
             MsgLevel level,
             string logInfo,
             bool isDisplay = false,
-            [CallerFilePath] string filePath = "",
-            [CallerMemberName] string memberName = "",
-            [CallerLineNumber] int lineNumber = 0)
+            /*[CallerFilePath]*/ string filePath = "",
+            /*[CallerMemberName]*/ string memberName = "",
+            /*[CallerLineNumber]*/ int lineNumber = 0
+            )
         {
             SingleLog singleLog = new SingleLog();
             singleLog.MakeLog(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"), $"{level}", logInfo, filePath, memberName, $"{lineNumber}");
@@ -171,11 +172,6 @@ namespace Logger
                 };
                 LogAddEvent?.Invoke(null, levelAndInfo);
             }
-        }
-
-        public static void Add(MsgLevel level, string logInfo, bool isDisplay = false)
-        {
-            AddLog(level, logInfo, isDisplay);
         }
 
         /// <summary>
@@ -213,11 +209,6 @@ namespace Logger
                 };
                 LogAddEvent?.Invoke(null, levelAndInfo);
             }
-        }
-
-        public void AddEx(MsgLevel level, string logInfo, Exception ex, bool isDisplay = false)
-        {
-            AddLog(level, logInfo, ex, isDisplay);
         }
 
         private void ControlListBox(string logToShow, ListBox myListBox)

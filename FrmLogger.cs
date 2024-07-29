@@ -5,6 +5,7 @@ using Logger;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using log4net.Core;
+using System.Runtime.CompilerServices;
 
 namespace FrmResultView
 {
@@ -24,7 +25,7 @@ namespace FrmResultView
         /// <summary>
         /// 用来缓存一开始因为日志窗口还没初始化导致的日志显示异常
         /// </summary>
-        private static Queue<Tuple<MsgLevel, string, bool>> queueLogs = new Queue<Tuple<MsgLevel, string, bool>>();
+        private static Queue<SingleLogInfo> queueLogs = new Queue<SingleLogInfo>();
         private static Timer _timer = new Timer();
 
         public FrmLogger()
@@ -62,7 +63,7 @@ namespace FrmResultView
                 if (!CheckIfLoaded())
                     return;
                 var item = queueLogs.Dequeue();
-                LogHelper.Add(item.Item1, item.Item2, item.Item3);
+                FrmLogger.AddLog(item.Info, item.Level, item.IsDisplay, item.FilePath, item.MemberName, item.LineNumber);
             };
         }
 
@@ -71,15 +72,21 @@ namespace FrmResultView
         /// </summary>
         /// <param name="level"></param>
         /// <param name="info"></param>
-        public static void AddLog(string info, MsgLevel level)
+        public static void AddLog(
+            string info,
+            MsgLevel level,
+            bool isDisplay = false,
+            [CallerFilePath] string filePath = "",
+            [CallerMemberName] string memberName = "",
+            [CallerLineNumber] int lineNumber = 0)
         {
             if (CheckIfLoaded())
             {
-                LogHelper.Add(level, info, true);
+                LogHelper.AddLog(level, info, true, filePath, memberName, lineNumber);
             }
             else
             {
-                queueLogs.Enqueue(Tuple.Create(level, info, true));
+                queueLogs.Enqueue(new SingleLogInfo(info, level, true, filePath, memberName, lineNumber));
             }
         }
 
@@ -102,5 +109,26 @@ namespace FrmResultView
             this.Hide();
         }
 
+    }
+    /// <summary>
+    /// 单条日志的结构
+    /// </summary>
+    public struct SingleLogInfo
+    {
+        public string Info;
+        public MsgLevel Level;
+        public bool IsDisplay;
+        public string FilePath;
+        public string MemberName;
+        public int LineNumber;
+        public SingleLogInfo(string info, MsgLevel level, bool isDisplay, string filePath, string memberName, int lineNum)
+        {
+            Info = info;
+            Level = level;
+            IsDisplay = isDisplay;
+            FilePath = filePath;
+            MemberName = memberName;
+            LineNumber = lineNum;
+        }
     }
 }

@@ -41,17 +41,17 @@
             this.算法参数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.vS2015BlueTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.添加1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加NG1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加ok2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加ng2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dockPanel1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.vS2015BlueTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2015BlueTheme();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -94,13 +94,13 @@
             // 保存所有配置ToolStripMenuItem
             // 
             this.保存所有配置ToolStripMenuItem.Name = "保存所有配置ToolStripMenuItem";
-            this.保存所有配置ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.保存所有配置ToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.保存所有配置ToolStripMenuItem.Text = "保存所有配置";
             // 
             // 导出所有配置ToolStripMenuItem
             // 
             this.导出所有配置ToolStripMenuItem.Name = "导出所有配置ToolStripMenuItem";
-            this.导出所有配置ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.导出所有配置ToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.导出所有配置ToolStripMenuItem.Text = "导出所有配置";
             // 
             // viewToolStripMenuItem
@@ -118,7 +118,7 @@
             this.图像ToolStripMenuItem.Checked = true;
             this.图像ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.图像ToolStripMenuItem.Name = "图像ToolStripMenuItem";
-            this.图像ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.图像ToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
             this.图像ToolStripMenuItem.Text = "图像窗口";
             this.图像ToolStripMenuItem.Click += new System.EventHandler(this.图像ToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             this.数据窗口ToolStripMenuItem.Checked = true;
             this.数据窗口ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.数据窗口ToolStripMenuItem.Name = "数据窗口ToolStripMenuItem";
-            this.数据窗口ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.数据窗口ToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
             this.数据窗口ToolStripMenuItem.Text = "数据窗口";
             this.数据窗口ToolStripMenuItem.Click += new System.EventHandler(this.数据窗口ToolStripMenuItem_Click);
             // 
@@ -136,7 +136,7 @@
             this.日志窗口ToolStripMenuItem.Checked = true;
             this.日志窗口ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.日志窗口ToolStripMenuItem.Name = "日志窗口ToolStripMenuItem";
-            this.日志窗口ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.日志窗口ToolStripMenuItem.Size = new System.Drawing.Size(198, 34);
             this.日志窗口ToolStripMenuItem.Text = "日志窗口";
             this.日志窗口ToolStripMenuItem.Click += new System.EventHandler(this.日志窗口ToolStripMenuItem_Click);
             // 
@@ -181,6 +181,34 @@
             this.登录ToolStripMenuItem.Text = "登录";
             this.登录ToolStripMenuItem.Click += new System.EventHandler(this.登录ToolStripMenuItem_Click);
             // 
+            // 添加1ToolStripMenuItem
+            // 
+            this.添加1ToolStripMenuItem.Name = "添加1ToolStripMenuItem";
+            this.添加1ToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.添加1ToolStripMenuItem.Text = "测试添加结果ok1";
+            this.添加1ToolStripMenuItem.Click += new System.EventHandler(this.添加1ToolStripMenuItem_Click);
+            // 
+            // 添加NG1ToolStripMenuItem
+            // 
+            this.添加NG1ToolStripMenuItem.Name = "添加NG1ToolStripMenuItem";
+            this.添加NG1ToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.添加NG1ToolStripMenuItem.Text = "测试添加结果NG1";
+            this.添加NG1ToolStripMenuItem.Click += new System.EventHandler(this.添加NG1ToolStripMenuItem_Click);
+            // 
+            // 添加ok2ToolStripMenuItem
+            // 
+            this.添加ok2ToolStripMenuItem.Name = "添加ok2ToolStripMenuItem";
+            this.添加ok2ToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.添加ok2ToolStripMenuItem.Text = "测试添加结果ok2";
+            this.添加ok2ToolStripMenuItem.Click += new System.EventHandler(this.添加ok2ToolStripMenuItem_Click);
+            // 
+            // 添加ng2ToolStripMenuItem
+            // 
+            this.添加ng2ToolStripMenuItem.Name = "添加ng2ToolStripMenuItem";
+            this.添加ng2ToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.添加ng2ToolStripMenuItem.Text = "测试添加结果ng2";
+            this.添加ng2ToolStripMenuItem.Click += new System.EventHandler(this.添加ng2ToolStripMenuItem_Click);
+            // 
             // dockPanel1
             // 
             this.dockPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -206,45 +234,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1542, 45);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.dockPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1542, 854);
-            this.panel1.TabIndex = 5;
-            // 
-            // 添加1ToolStripMenuItem
-            // 
-            this.添加1ToolStripMenuItem.Name = "添加1ToolStripMenuItem";
-            this.添加1ToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
-            this.添加1ToolStripMenuItem.Text = "添加ok1";
-            this.添加1ToolStripMenuItem.Click += new System.EventHandler(this.添加1ToolStripMenuItem_Click);
-            // 
-            // 添加NG1ToolStripMenuItem
-            // 
-            this.添加NG1ToolStripMenuItem.Name = "添加NG1ToolStripMenuItem";
-            this.添加NG1ToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
-            this.添加NG1ToolStripMenuItem.Text = "添加NG1";
-            this.添加NG1ToolStripMenuItem.Click += new System.EventHandler(this.添加NG1ToolStripMenuItem_Click);
-            // 
-            // 添加ok2ToolStripMenuItem
-            // 
-            this.添加ok2ToolStripMenuItem.Name = "添加ok2ToolStripMenuItem";
-            this.添加ok2ToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
-            this.添加ok2ToolStripMenuItem.Text = "添加ok2";
-            this.添加ok2ToolStripMenuItem.Click += new System.EventHandler(this.添加ok2ToolStripMenuItem_Click);
-            // 
-            // 添加ng2ToolStripMenuItem
-            // 
-            this.添加ng2ToolStripMenuItem.Name = "添加ng2ToolStripMenuItem";
-            this.添加ng2ToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
-            this.添加ng2ToolStripMenuItem.Text = "添加ng2";
-            this.添加ng2ToolStripMenuItem.Click += new System.EventHandler(this.添加ng2ToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
@@ -282,6 +271,17 @@
             this.toolStripButton3.Text = "toolStripButton2";
             this.toolStripButton3.ToolTipText = "停止运行";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.dockPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1542, 854);
+            this.panel1.TabIndex = 5;
             // 
             // FormMain
             // 

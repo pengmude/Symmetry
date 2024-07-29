@@ -84,15 +84,22 @@ namespace Symmetry
         /// </summary>
         private void InitExeConfigs()
         {
-            bool noFileFlag = false;
+            string json = string.Empty;
             if (!File.Exists(ConfigsFile))
             {
-                File.Create(ConfigsFile);
-                noFileFlag = true;
+                File.Create(ConfigsFile).Dispose();
+                json = "{}"; // 默认 JSON 内容
             }
-            if (noFileFlag)
-                File.WriteAllText(ConfigsFile, "{}");
-            string json = File.ReadAllText(ConfigsFile);
+            else
+            {
+                json = File.ReadAllText(ConfigsFile);
+            }
+
+            if (string.IsNullOrWhiteSpace(json))
+            {
+                json = "{}"; // 如果文件为空，设置默认值
+            }
+
             ExeConfig = JsonConvert.DeserializeObject<ExeConfig>(json);
         }
 
